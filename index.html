@@ -19,35 +19,12 @@
     --radius: 12px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--black);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    min-height: 100vh;
-    padding-bottom: 40px;
-  }
-  header {
-    padding: 28px 20px 20px;
-    text-align: center;
-    border-bottom: 1px solid #1f1f1f;
-  }
-  .party-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    color: var(--text);
-  }
+  body { background: var(--black); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; padding-bottom: 40px; }
+  header { padding: 28px 20px 20px; text-align: center; border-bottom: 1px solid #1f1f1f; }
+  .party-title { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
   .party-title span { color: var(--green); }
   .subtitle { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
-  .now-playing-bar {
-    background: var(--surface);
-    border-bottom: 1px solid #1f1f1f;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+  .now-playing-bar { background: var(--surface); border-bottom: 1px solid #1f1f1f; padding: 12px 20px; display: flex; align-items: center; gap: 12px; }
   .np-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; color: var(--green); text-transform: uppercase; white-space: nowrap; }
   .np-art { width: 36px; height: 36px; border-radius: 4px; background: var(--surface3); flex-shrink: 0; object-fit: cover; }
   .np-info { flex: 1; min-width: 0; }
@@ -61,19 +38,11 @@
   .main { padding: 20px; max-width: 500px; margin: 0 auto; }
   .search-wrap { position: relative; margin-bottom: 16px; }
   .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 18px; pointer-events: none; }
-  input[type="text"] {
-    width: 100%; background: var(--surface); border: 1px solid #2a2a2a;
-    border-radius: var(--radius); color: var(--text); font-family: 'DM Sans', sans-serif;
-    font-size: 15px; padding: 14px 14px 14px 44px; outline: none; transition: border-color .2s;
-  }
+  input[type="text"] { width: 100%; background: var(--surface); border: 1px solid #2a2a2a; border-radius: var(--radius); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; padding: 14px 14px 14px 44px; outline: none; transition: border-color .2s; }
   input[type="text"]:focus { border-color: var(--green); }
   input[type="text"]::placeholder { color: var(--text-dim); }
   .results-list { display: flex; flex-direction: column; gap: 8px; }
-  .result-item {
-    background: var(--surface); border: 1px solid #1f1f1f; border-radius: var(--radius);
-    padding: 12px 14px; display: flex; align-items: center; gap: 12px; cursor: pointer;
-    transition: background .15s, border-color .15s; -webkit-tap-highlight-color: transparent;
-  }
+  .result-item { background: var(--surface); border: 1px solid #1f1f1f; border-radius: var(--radius); padding: 12px 14px; display: flex; align-items: center; gap: 12px; cursor: pointer; transition: background .15s; -webkit-tap-highlight-color: transparent; }
   .result-item:active { background: var(--surface2); transform: scale(0.99); }
   .result-item:hover { border-color: #333; background: var(--surface2); }
   .result-art { width: 44px; height: 44px; border-radius: 6px; background: var(--surface3); flex-shrink: 0; object-fit: cover; }
@@ -81,21 +50,11 @@
   .result-name { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .result-artist { font-size: 12px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
   .result-duration { font-size: 12px; color: var(--text-dim); flex-shrink: 0; }
-  .add-btn {
-    width: 32px; height: 32px; border-radius: 50%; background: var(--green); border: none;
-    color: white; font-size: 20px; display: flex; align-items: center; justify-content: center;
-    cursor: pointer; flex-shrink: 0; transition: background .15s, transform .1s;
-  }
+  .add-btn { width: 32px; height: 32px; border-radius: 50%; background: var(--green); border: none; color: white; font-size: 20px; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; transition: background .15s, transform .1s; }
   .add-btn:active { transform: scale(0.9); background: var(--green-dark); }
-  .toast {
-    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
-    background: var(--green); color: white; font-size: 13px; font-weight: 500;
-    padding: 10px 20px; border-radius: 999px; white-space: nowrap;
-    transition: transform .3s cubic-bezier(.34,1.56,.64,1); z-index: 100; pointer-events: none;
-  }
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--green); color: white; font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: 999px; white-space: nowrap; transition: transform .3s cubic-bezier(.34,1.56,.64,1); z-index: 100; pointer-events: none; }
   .toast.show { transform: translateX(-50%) translateY(0); }
   .toast.error { background: #c0392b; }
-  .section-title { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
   .empty-state { text-align: center; padding: 40px 0; color: var(--text-dim); }
   .empty-icon { font-size: 36px; margin-bottom: 10px; }
   .empty-text { font-size: 14px; }
@@ -112,7 +71,7 @@
   .btn-spotify { background: var(--green); color: white; border: none; border-radius: 999px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 32px; cursor: pointer; transition: background .15s, transform .1s; display: flex; align-items: center; gap: 8px; }
   .btn-spotify:active { transform: scale(0.97); background: var(--green-dark); }
   .host-note { margin-top: 20px; font-size: 12px; color: var(--text-dim); }
-  .tabs { display: flex; gap: 0; background: var(--surface); border-radius: var(--radius); padding: 4px; margin-bottom: 20px; }
+  .tabs { display: flex; background: var(--surface); border-radius: var(--radius); padding: 4px; margin-bottom: 20px; }
   .tab { flex: 1; background: transparent; border: none; color: var(--text-muted); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 8px; border-radius: 8px; cursor: pointer; transition: background .15s, color .15s; }
   .tab.active { background: var(--surface3); color: var(--text); }
   .tab-panel { display: none; }
@@ -122,19 +81,32 @@
   .dot:nth-child(2) { animation-delay: .2s; }
   .dot:nth-child(3) { animation-delay: .4s; }
   @keyframes pulse { 0%,100%{opacity:.3;} 50%{opacity:1;} }
-  .error-box { background: #1a0a0a; border: 1px solid #4a1a1a; border-radius: var(--radius); padding: 16px; margin: 16px 0; font-size: 13px; color: #ff6b6b; line-height: 1.6; }
+  .section-title { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+  .waiting-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; padding: 40px 20px; text-align: center; }
+  .waiting-icon { font-size: 48px; margin-bottom: 16px; }
+  .waiting-title { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+  .waiting-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; max-width: 260px; }
 </style>
 </head>
 <body>
 
+<!-- HOST LOGIN SCREEN -->
 <div id="login-screen" class="login-screen" style="display:none;">
   <div class="spotify-logo">♫</div>
-  <div class="login-title">Party Queue</div>
-  <div class="login-desc">Host: connect your Spotify account to let guests add songs to your queue.</div>
+  <div class="login-title">Host Setup</div>
+  <div class="login-desc">You are the host. Connect your Spotify account once to let guests add songs.</div>
   <button class="btn-spotify" onclick="loginWithSpotify()">♫ Connect Spotify</button>
-  <p class="host-note">Only the host needs to do this once</p>
+  <p class="host-note">Guests do not need to do this</p>
 </div>
 
+<!-- GUEST WAITING SCREEN (shown if host not set up yet) -->
+<div id="waiting-screen" class="waiting-screen" style="display:none;">
+  <div class="waiting-icon">🎵</div>
+  <div class="waiting-title">Party not started yet</div>
+  <div class="waiting-desc">The host hasn't connected Spotify yet. Check back soon!</div>
+</div>
+
+<!-- MAIN APP (guests land here directly) -->
 <div id="app-screen" style="display:none;">
   <header>
     <div class="party-title">Party <span>Queue</span></div>
@@ -171,11 +143,11 @@
       </div>
     </div>
     <div id="tab-queue" class="tab-panel">
-      <div class="section-title">Up next</div>
+      <div class="section-title">Added tonight</div>
       <div id="queue-container">
         <div class="empty-state">
           <div class="empty-icon">📋</div>
-          <div class="empty-text">Queue is empty — add a song!</div>
+          <div class="empty-text">No songs added yet — be first!</div>
         </div>
       </div>
     </div>
@@ -189,22 +161,27 @@ const CLIENT_ID = '028b9b277529407cb81e7dc4ec119e34';
 const REDIRECT_URI = window.location.origin + '/';
 const SCOPES = 'user-read-playback-state user-modify-playback-state user-read-currently-playing';
 
+// Shared queue visible to all guests (stored in localStorage under a shared key)
+const SHARED_TOKEN_KEY = 'pq_host_token';
+const SHARED_TOKEN_TIME_KEY = 'pq_host_token_time';
+const SHARED_REFRESH_KEY = 'pq_host_refresh';
+const SHARED_QUEUE_KEY = 'pq_shared_queue';
+
 let accessToken = null;
 let searchTimeout = null;
-let addedQueue = [];
-let codeVerifier = null;
+
+// HOST MODE: triggered by visiting /?host=1
+const isHostMode = new URLSearchParams(window.location.search).get('host') === '1';
 
 async function generateCodeVerifier() {
   const array = new Uint8Array(32);
   crypto.getRandomValues(array);
-  return btoa(String.fromCharCode(...array)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+  return btoa(String.fromCharCode(...array)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=/g,'');
 }
-
 async function generateCodeChallenge(verifier) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(verifier);
+  const data = new TextEncoder().encode(verifier);
   const digest = await crypto.subtle.digest('SHA-256', data);
-  return btoa(String.fromCharCode(...new Uint8Array(digest))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+  return btoa(String.fromCharCode(...new Uint8Array(digest))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=/g,'');
 }
 
 async function loginWithSpotify() {
@@ -217,7 +194,8 @@ async function loginWithSpotify() {
     scope: SCOPES,
     redirect_uri: REDIRECT_URI,
     code_challenge_method: 'S256',
-    code_challenge: challenge
+    code_challenge: challenge,
+    state: 'host'
   });
   window.location.href = 'https://accounts.spotify.com/authorize?' + params.toString();
 }
@@ -226,7 +204,7 @@ async function exchangeCodeForToken(code) {
   const verifier = localStorage.getItem('code_verifier');
   const body = new URLSearchParams({
     grant_type: 'authorization_code',
-    code: code,
+    code,
     redirect_uri: REDIRECT_URI,
     client_id: CLIENT_ID,
     code_verifier: verifier
@@ -238,9 +216,9 @@ async function exchangeCodeForToken(code) {
   });
   const data = await res.json();
   if (data.access_token) {
-    localStorage.setItem('spotify_token', data.access_token);
-    localStorage.setItem('spotify_token_time', Date.now());
-    if (data.refresh_token) localStorage.setItem('spotify_refresh_token', data.refresh_token);
+    localStorage.setItem(SHARED_TOKEN_KEY, data.access_token);
+    localStorage.setItem(SHARED_TOKEN_TIME_KEY, Date.now());
+    if (data.refresh_token) localStorage.setItem(SHARED_REFRESH_KEY, data.refresh_token);
     localStorage.removeItem('code_verifier');
     return data.access_token;
   }
@@ -248,7 +226,7 @@ async function exchangeCodeForToken(code) {
 }
 
 async function refreshAccessToken() {
-  const refreshToken = localStorage.getItem('spotify_refresh_token');
+  const refreshToken = localStorage.getItem(SHARED_REFRESH_KEY);
   if (!refreshToken) return null;
   const body = new URLSearchParams({
     grant_type: 'refresh_token',
@@ -262,8 +240,8 @@ async function refreshAccessToken() {
   });
   const data = await res.json();
   if (data.access_token) {
-    localStorage.setItem('spotify_token', data.access_token);
-    localStorage.setItem('spotify_token_time', Date.now());
+    localStorage.setItem(SHARED_TOKEN_KEY, data.access_token);
+    localStorage.setItem(SHARED_TOKEN_TIME_KEY, Date.now());
     return data.access_token;
   }
   return null;
@@ -272,25 +250,44 @@ async function refreshAccessToken() {
 async function init() {
   const params = new URLSearchParams(window.location.search);
   const code = params.get('code');
-  if (code) {
+  const state = params.get('state');
+
+  // Coming back from Spotify login (host)
+  if (code && state === 'host') {
     window.history.replaceState({}, '', '/');
     const token = await exchangeCodeForToken(code);
     if (token) { accessToken = token; showApp(); return; }
   }
-  const stored = localStorage.getItem('spotify_token');
-  const storedTime = localStorage.getItem('spotify_token_time');
+
+  // Check if host token exists and is valid
+  const stored = localStorage.getItem(SHARED_TOKEN_KEY);
+  const storedTime = localStorage.getItem(SHARED_TOKEN_TIME_KEY);
+
   if (stored && storedTime) {
     const age = Date.now() - parseInt(storedTime);
-    if (age < 3500000) { accessToken = stored; showApp(); return; }
+    if (age < 3500000) {
+      accessToken = stored;
+      showApp();
+      return;
+    }
+    // Try to refresh
     const refreshed = await refreshAccessToken();
     if (refreshed) { accessToken = refreshed; showApp(); return; }
   }
-  document.getElementById('login-screen').style.display = 'flex';
+
+  // No token — show host login if host mode, else waiting screen for guests
+  if (isHostMode) {
+    document.getElementById('login-screen').style.display = 'flex';
+  } else {
+    document.getElementById('waiting-screen').style.display = 'flex';
+  }
 }
 
 function showApp() {
   document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('waiting-screen').style.display = 'none';
   document.getElementById('app-screen').style.display = 'block';
+  loadSharedQueue();
   fetchNowPlaying();
   setInterval(fetchNowPlaying, 10000);
 }
@@ -312,8 +309,7 @@ async function fetchNowPlaying() {
       }
     } else if (res.status === 401) {
       const refreshed = await refreshAccessToken();
-      if (refreshed) { accessToken = refreshed; fetchNowPlaying(); }
-      else { localStorage.removeItem('spotify_token'); accessToken = null; document.getElementById('app-screen').style.display = 'none'; document.getElementById('login-screen').style.display = 'flex'; }
+      if (refreshed) { accessToken = refreshed; }
     }
   } catch(e) {}
 }
@@ -362,6 +358,41 @@ function escHtml(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
+function loadSharedQueue() {
+  try {
+    const saved = localStorage.getItem(SHARED_QUEUE_KEY);
+    if (saved) updateQueueDisplay(JSON.parse(saved));
+  } catch(e) {}
+}
+
+function saveToSharedQueue(track) {
+  try {
+    const saved = localStorage.getItem(SHARED_QUEUE_KEY);
+    const queue = saved ? JSON.parse(saved) : [];
+    queue.push(track);
+    localStorage.setItem(SHARED_QUEUE_KEY, JSON.stringify(queue));
+    updateQueueDisplay(queue);
+  } catch(e) {}
+}
+
+function updateQueueDisplay(queue) {
+  document.getElementById('queue-count').textContent = queue.length ? `(${queue.length})` : '';
+  if (!queue.length) {
+    document.getElementById('queue-container').innerHTML = `<div class="empty-state"><div class="empty-icon">📋</div><div class="empty-text">No songs added yet — be first!</div></div>`;
+    return;
+  }
+  document.getElementById('queue-container').innerHTML = queue.map((t, i) =>
+    `<div class="queue-item">
+      ${t.art ? `<img class="queue-art" src="${escHtml(t.art)}" alt="">` : '<div class="queue-art"></div>'}
+      <div class="queue-info">
+        <div class="queue-name">${escHtml(t.name)}</div>
+        <div class="queue-artist">${escHtml(t.artist)}</div>
+      </div>
+      <div class="queue-badge">#${i+1}</div>
+    </div>`
+  ).join('');
+}
+
 async function addToQueue(uri, name, artist, art) {
   try {
     const res = await fetch(`https://api.spotify.com/v1/me/player/queue?uri=${encodeURIComponent(uri)}`, {
@@ -370,10 +401,9 @@ async function addToQueue(uri, name, artist, art) {
     });
     if (res.status === 204) {
       showToast('✓ Added: ' + name);
-      addedQueue.push({ name, artist, art });
-      updateQueueTab();
+      saveToSharedQueue({ name, artist, art });
     } else if (res.status === 404) {
-      showToast('Open Spotify on your device first!', true);
+      showToast('Host needs to open Spotify first!', true);
     } else if (res.status === 403) {
       showToast('Spotify Premium required', true);
     } else {
@@ -382,24 +412,6 @@ async function addToQueue(uri, name, artist, art) {
   } catch(e) {
     showToast('Connection error. Try again.', true);
   }
-}
-
-function updateQueueTab() {
-  document.getElementById('queue-count').textContent = addedQueue.length ? `(${addedQueue.length})` : '';
-  if (!addedQueue.length) {
-    document.getElementById('queue-container').innerHTML = `<div class="empty-state"><div class="empty-icon">📋</div><div class="empty-text">Queue is empty — add a song!</div></div>`;
-    return;
-  }
-  document.getElementById('queue-container').innerHTML = addedQueue.map((t, i) =>
-    `<div class="queue-item">
-      ${t.art ? `<img class="queue-art" src="${t.art}" alt="">` : '<div class="queue-art"></div>'}
-      <div class="queue-info">
-        <div class="queue-name">${escHtml(t.name)}</div>
-        <div class="queue-artist">${escHtml(t.artist)}</div>
-      </div>
-      <div class="queue-badge">#${i+1}</div>
-    </div>`
-  ).join('');
 }
 
 function showToast(msg, isError = false) {
