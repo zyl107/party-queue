@@ -30,7 +30,6 @@
     padding: 28px 20px 20px;
     text-align: center;
     border-bottom: 1px solid #1f1f1f;
-    position: relative;
   }
   .party-title {
     font-family: 'Syne', sans-serif;
@@ -40,11 +39,7 @@
     color: var(--text);
   }
   .party-title span { color: var(--green); }
-  .subtitle {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 4px;
-  }
+  .subtitle { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
   .now-playing-bar {
     background: var(--surface);
     border-bottom: 1px solid #1f1f1f;
@@ -53,316 +48,81 @@
     align-items: center;
     gap: 12px;
   }
-  .np-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: .1em;
-    color: var(--green);
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
-  .np-art {
-    width: 36px;
-    height: 36px;
-    border-radius: 4px;
-    background: var(--surface3);
-    flex-shrink: 0;
-    object-fit: cover;
-  }
+  .np-label { font-size: 10px; font-weight: 600; letter-spacing: .1em; color: var(--green); text-transform: uppercase; white-space: nowrap; }
+  .np-art { width: 36px; height: 36px; border-radius: 4px; background: var(--surface3); flex-shrink: 0; object-fit: cover; }
   .np-info { flex: 1; min-width: 0; }
-  .np-song {
-    font-size: 13px;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .np-artist {
-    font-size: 12px;
-    color: var(--text-muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .bars {
-    display: flex;
-    align-items: flex-end;
-    gap: 2px;
-    height: 16px;
-    flex-shrink: 0;
-  }
-  .bar {
-    width: 3px;
-    background: var(--green);
-    border-radius: 2px;
-    animation: bounce 0.8s ease-in-out infinite;
-  }
+  .np-song { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .np-artist { font-size: 12px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bars { display: flex; align-items: flex-end; gap: 2px; height: 16px; flex-shrink: 0; }
+  .bar { width: 3px; background: var(--green); border-radius: 2px; animation: bounce 0.8s ease-in-out infinite; }
   .bar:nth-child(2) { animation-delay: 0.15s; }
   .bar:nth-child(3) { animation-delay: 0.3s; }
-  @keyframes bounce {
-    0%, 100% { height: 4px; }
-    50% { height: 14px; }
-  }
+  @keyframes bounce { 0%, 100% { height: 4px; } 50% { height: 14px; } }
   .main { padding: 20px; max-width: 500px; margin: 0 auto; }
-  .search-wrap {
-    position: relative;
-    margin-bottom: 16px;
-  }
-  .search-icon {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-dim);
-    font-size: 18px;
-    pointer-events: none;
-  }
+  .search-wrap { position: relative; margin-bottom: 16px; }
+  .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 18px; pointer-events: none; }
   input[type="text"] {
-    width: 100%;
-    background: var(--surface);
-    border: 1px solid #2a2a2a;
-    border-radius: var(--radius);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    padding: 14px 14px 14px 44px;
-    outline: none;
-    transition: border-color .2s;
+    width: 100%; background: var(--surface); border: 1px solid #2a2a2a;
+    border-radius: var(--radius); color: var(--text); font-family: 'DM Sans', sans-serif;
+    font-size: 15px; padding: 14px 14px 14px 44px; outline: none; transition: border-color .2s;
   }
   input[type="text"]:focus { border-color: var(--green); }
   input[type="text"]::placeholder { color: var(--text-dim); }
   .results-list { display: flex; flex-direction: column; gap: 8px; }
   .result-item {
-    background: var(--surface);
-    border: 1px solid #1f1f1f;
-    border-radius: var(--radius);
-    padding: 12px 14px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    transition: background .15s, border-color .15s;
-    -webkit-tap-highlight-color: transparent;
+    background: var(--surface); border: 1px solid #1f1f1f; border-radius: var(--radius);
+    padding: 12px 14px; display: flex; align-items: center; gap: 12px; cursor: pointer;
+    transition: background .15s, border-color .15s; -webkit-tap-highlight-color: transparent;
   }
   .result-item:active { background: var(--surface2); transform: scale(0.99); }
   .result-item:hover { border-color: #333; background: var(--surface2); }
-  .result-art {
-    width: 44px;
-    height: 44px;
-    border-radius: 6px;
-    background: var(--surface3);
-    flex-shrink: 0;
-    object-fit: cover;
-  }
+  .result-art { width: 44px; height: 44px; border-radius: 6px; background: var(--surface3); flex-shrink: 0; object-fit: cover; }
   .result-info { flex: 1; min-width: 0; }
-  .result-name {
-    font-size: 14px;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .result-artist {
-    font-size: 12px;
-    color: var(--text-muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 2px;
-  }
-  .result-duration {
-    font-size: 12px;
-    color: var(--text-dim);
-    flex-shrink: 0;
-  }
+  .result-name { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .result-artist { font-size: 12px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+  .result-duration { font-size: 12px; color: var(--text-dim); flex-shrink: 0; }
   .add-btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--green);
-    border: none;
-    color: white;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: background .15s, transform .1s;
+    width: 32px; height: 32px; border-radius: 50%; background: var(--green); border: none;
+    color: white; font-size: 20px; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; flex-shrink: 0; transition: background .15s, transform .1s;
   }
   .add-btn:active { transform: scale(0.9); background: var(--green-dark); }
   .toast {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%) translateY(80px);
-    background: var(--green);
-    color: white;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 999px;
-    white-space: nowrap;
-    transition: transform .3s cubic-bezier(.34,1.56,.64,1);
-    z-index: 100;
-    pointer-events: none;
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+    background: var(--green); color: white; font-size: 13px; font-weight: 500;
+    padding: 10px 20px; border-radius: 999px; white-space: nowrap;
+    transition: transform .3s cubic-bezier(.34,1.56,.64,1); z-index: 100; pointer-events: none;
   }
   .toast.show { transform: translateX(-50%) translateY(0); }
   .toast.error { background: #c0392b; }
-  .section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    margin-bottom: 10px;
-  }
-  .empty-state {
-    text-align: center;
-    padding: 40px 0;
-    color: var(--text-dim);
-  }
+  .section-title { font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
+  .empty-state { text-align: center; padding: 40px 0; color: var(--text-dim); }
   .empty-icon { font-size: 36px; margin-bottom: 10px; }
   .empty-text { font-size: 14px; }
-  .queue-item {
-    background: var(--surface);
-    border: 1px solid #1f1f1f;
-    border-radius: var(--radius);
-    padding: 10px 14px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px;
-  }
-  .queue-art {
-    width: 36px;
-    height: 36px;
-    border-radius: 4px;
-    background: var(--surface3);
-    flex-shrink: 0;
-    object-fit: cover;
-  }
+  .queue-item { background: var(--surface); border: 1px solid #1f1f1f; border-radius: var(--radius); padding: 10px 14px; display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .queue-art { width: 36px; height: 36px; border-radius: 4px; background: var(--surface3); flex-shrink: 0; object-fit: cover; }
   .queue-info { flex: 1; min-width: 0; }
-  .queue-name {
-    font-size: 13px;
-    font-weight: 500;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .queue-artist {
-    font-size: 12px;
-    color: var(--text-muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .queue-badge {
-    font-size: 10px;
-    background: var(--surface3);
-    color: var(--text-muted);
-    padding: 2px 8px;
-    border-radius: 20px;
-    flex-shrink: 0;
-  }
-  .login-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  .spotify-logo {
-    width: 56px;
-    height: 56px;
-    background: var(--green);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 28px;
-  }
-  .login-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 24px;
-    font-weight: 800;
-    margin-bottom: 8px;
-  }
-  .login-desc {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 28px;
-    max-width: 280px;
-    line-height: 1.6;
-  }
-  .btn-spotify {
-    background: var(--green);
-    color: white;
-    border: none;
-    border-radius: 999px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 14px 32px;
-    cursor: pointer;
-    transition: background .15s, transform .1s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+  .queue-name { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .queue-artist { font-size: 12px; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .queue-badge { font-size: 10px; background: var(--surface3); color: var(--text-muted); padding: 2px 8px; border-radius: 20px; flex-shrink: 0; }
+  .login-screen { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; padding: 40px 20px; text-align: center; }
+  .spotify-logo { width: 56px; height: 56px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 28px; }
+  .login-title { font-family: 'Syne', sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+  .login-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 28px; max-width: 280px; line-height: 1.6; }
+  .btn-spotify { background: var(--green); color: white; border: none; border-radius: 999px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 14px 32px; cursor: pointer; transition: background .15s, transform .1s; display: flex; align-items: center; gap: 8px; }
   .btn-spotify:active { transform: scale(0.97); background: var(--green-dark); }
-  .host-note {
-    margin-top: 20px;
-    font-size: 12px;
-    color: var(--text-dim);
-  }
-  .tabs {
-    display: flex;
-    gap: 0;
-    background: var(--surface);
-    border-radius: var(--radius);
-    padding: 4px;
-    margin-bottom: 20px;
-  }
-  .tab {
-    flex: 1;
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    padding: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background .15s, color .15s;
-  }
-  .tab.active {
-    background: var(--surface3);
-    color: var(--text);
-  }
+  .host-note { margin-top: 20px; font-size: 12px; color: var(--text-dim); }
+  .tabs { display: flex; gap: 0; background: var(--surface); border-radius: var(--radius); padding: 4px; margin-bottom: 20px; }
+  .tab { flex: 1; background: transparent; border: none; color: var(--text-muted); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 8px; border-radius: 8px; cursor: pointer; transition: background .15s, color .15s; }
+  .tab.active { background: var(--surface3); color: var(--text); }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
-  .loading-dots {
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-    padding: 24px 0;
-  }
-  .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--text-dim);
-    animation: pulse 1s ease-in-out infinite;
-  }
+  .loading-dots { display: flex; gap: 6px; justify-content: center; padding: 24px 0; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text-dim); animation: pulse 1s ease-in-out infinite; }
   .dot:nth-child(2) { animation-delay: .2s; }
   .dot:nth-child(3) { animation-delay: .4s; }
   @keyframes pulse { 0%,100%{opacity:.3;} 50%{opacity:1;} }
+  .error-box { background: #1a0a0a; border: 1px solid #4a1a1a; border-radius: var(--radius); padding: 16px; margin: 16px 0; font-size: 13px; color: #ff6b6b; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -371,9 +131,7 @@
   <div class="spotify-logo">♫</div>
   <div class="login-title">Party Queue</div>
   <div class="login-desc">Host: connect your Spotify account to let guests add songs to your queue.</div>
-  <button class="btn-spotify" onclick="loginWithSpotify()">
-    ♫ Connect Spotify
-  </button>
+  <button class="btn-spotify" onclick="loginWithSpotify()">♫ Connect Spotify</button>
   <p class="host-note">Only the host needs to do this once</p>
 </div>
 
@@ -382,7 +140,6 @@
     <div class="party-title">Party <span>Queue</span></div>
     <div class="subtitle">Search for a song to add to the mix</div>
   </header>
-
   <div class="now-playing-bar" id="now-playing-bar" style="display:none;">
     <div class="np-label">Now playing</div>
     <img class="np-art" id="np-art" src="" alt="">
@@ -396,13 +153,11 @@
       <div class="bar" style="height:6px"></div>
     </div>
   </div>
-
   <div class="main">
     <div class="tabs">
       <button class="tab active" onclick="switchTab('search')">Search</button>
       <button class="tab" onclick="switchTab('queue')">Queue <span id="queue-count"></span></button>
     </div>
-
     <div id="tab-search" class="tab-panel active">
       <div class="search-wrap">
         <span class="search-icon">🔍</span>
@@ -415,7 +170,6 @@
         </div>
       </div>
     </div>
-
     <div id="tab-queue" class="tab-panel">
       <div class="section-title">Up next</div>
       <div id="queue-container">
@@ -432,57 +186,106 @@
 
 <script>
 const CLIENT_ID = '028b9b277529407cb81e7dc4ec119e34';
-const REDIRECT_URI = window.location.origin + window.location.pathname;
+const REDIRECT_URI = window.location.origin + '/';
 const SCOPES = 'user-read-playback-state user-modify-playback-state user-read-currently-playing';
 
 let accessToken = null;
 let searchTimeout = null;
 let addedQueue = [];
+let codeVerifier = null;
 
-function generateRandomString(length) {
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  let result = '';
-  for (let i = 0; i < length; i++) result += chars.charAt(Math.floor(Math.random() * chars.length));
-  return result;
+async function generateCodeVerifier() {
+  const array = new Uint8Array(32);
+  crypto.getRandomValues(array);
+  return btoa(String.fromCharCode(...array)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
+}
+
+async function generateCodeChallenge(verifier) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(verifier);
+  const digest = await crypto.subtle.digest('SHA-256', data);
+  return btoa(String.fromCharCode(...new Uint8Array(digest))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
 }
 
 async function loginWithSpotify() {
-  const state = generateRandomString(16);
-  localStorage.setItem('spotify_auth_state', state);
+  const verifier = await generateCodeVerifier();
+  const challenge = await generateCodeChallenge(verifier);
+  localStorage.setItem('code_verifier', verifier);
   const params = new URLSearchParams({
-    response_type: 'token',
+    response_type: 'code',
     client_id: CLIENT_ID,
     scope: SCOPES,
     redirect_uri: REDIRECT_URI,
-    state: state
+    code_challenge_method: 'S256',
+    code_challenge: challenge
   });
   window.location.href = 'https://accounts.spotify.com/authorize?' + params.toString();
 }
 
-function getTokenFromUrl() {
-  const hash = window.location.hash.substring(1);
-  const params = new URLSearchParams(hash);
-  return params.get('access_token');
+async function exchangeCodeForToken(code) {
+  const verifier = localStorage.getItem('code_verifier');
+  const body = new URLSearchParams({
+    grant_type: 'authorization_code',
+    code: code,
+    redirect_uri: REDIRECT_URI,
+    client_id: CLIENT_ID,
+    code_verifier: verifier
+  });
+  const res = await fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString()
+  });
+  const data = await res.json();
+  if (data.access_token) {
+    localStorage.setItem('spotify_token', data.access_token);
+    localStorage.setItem('spotify_token_time', Date.now());
+    if (data.refresh_token) localStorage.setItem('spotify_refresh_token', data.refresh_token);
+    localStorage.removeItem('code_verifier');
+    return data.access_token;
+  }
+  return null;
 }
 
-function init() {
-  const token = getTokenFromUrl();
-  if (token) {
-    accessToken = token;
-    localStorage.setItem('spotify_token', token);
+async function refreshAccessToken() {
+  const refreshToken = localStorage.getItem('spotify_refresh_token');
+  if (!refreshToken) return null;
+  const body = new URLSearchParams({
+    grant_type: 'refresh_token',
+    refresh_token: refreshToken,
+    client_id: CLIENT_ID
+  });
+  const res = await fetch('https://accounts.spotify.com/api/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString()
+  });
+  const data = await res.json();
+  if (data.access_token) {
+    localStorage.setItem('spotify_token', data.access_token);
     localStorage.setItem('spotify_token_time', Date.now());
-    window.history.replaceState({}, '', window.location.pathname);
-    showApp();
-  } else {
-    const stored = localStorage.getItem('spotify_token');
-    const storedTime = localStorage.getItem('spotify_token_time');
-    if (stored && storedTime && (Date.now() - storedTime) < 3600000) {
-      accessToken = stored;
-      showApp();
-    } else {
-      document.getElementById('login-screen').style.display = 'flex';
-    }
+    return data.access_token;
   }
+  return null;
+}
+
+async function init() {
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  if (code) {
+    window.history.replaceState({}, '', '/');
+    const token = await exchangeCodeForToken(code);
+    if (token) { accessToken = token; showApp(); return; }
+  }
+  const stored = localStorage.getItem('spotify_token');
+  const storedTime = localStorage.getItem('spotify_token_time');
+  if (stored && storedTime) {
+    const age = Date.now() - parseInt(storedTime);
+    if (age < 3500000) { accessToken = stored; showApp(); return; }
+    const refreshed = await refreshAccessToken();
+    if (refreshed) { accessToken = refreshed; showApp(); return; }
+  }
+  document.getElementById('login-screen').style.display = 'flex';
 }
 
 function showApp() {
@@ -508,10 +311,9 @@ async function fetchNowPlaying() {
         if (art) document.getElementById('np-art').src = art.url;
       }
     } else if (res.status === 401) {
-      localStorage.removeItem('spotify_token');
-      accessToken = null;
-      document.getElementById('app-screen').style.display = 'none';
-      document.getElementById('login-screen').style.display = 'flex';
+      const refreshed = await refreshAccessToken();
+      if (refreshed) { accessToken = refreshed; fetchNowPlaying(); }
+      else { localStorage.removeItem('spotify_token'); accessToken = null; document.getElementById('app-screen').style.display = 'none'; document.getElementById('login-screen').style.display = 'flex'; }
     }
   } catch(e) {}
 }
@@ -557,7 +359,7 @@ async function searchTracks(query) {
 }
 
 function escHtml(str) {
-  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
 async function addToQueue(uri, name, artist, art) {
@@ -613,12 +415,13 @@ function switchTab(tab) {
   document.getElementById('tab-' + tab).classList.add('active');
 }
 
-document.getElementById('search-input')?.addEventListener('input', e => {
-  clearTimeout(searchTimeout);
-  searchTimeout = setTimeout(() => searchTracks(e.target.value), 400);
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('search-input')?.addEventListener('input', e => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => searchTracks(e.target.value), 400);
+  });
+  init();
 });
-
-init();
 </script>
 </body>
 </html>
